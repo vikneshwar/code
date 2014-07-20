@@ -1,0 +1,39 @@
+#include <stdio.h>
+ 
+int main() {
+  int a, b, x, y, t, gcd, lcm;
+ 
+  printf("Enter two integers\n");
+  scanf("%d%d", &x, &y);
+ 
+  a = x;
+  b = y;
+ 
+  while (b != 0) {
+    t = b;
+    b = a % b;
+    a = t;
+  }
+ 
+  gcd = a;
+  lcm = (x*y)/gcd;
+  printf("Greatest common divisor of %d and %d = %d\n", x, y, gcd);
+  printf("Least common multiple of %d and %d = %d\n", x, y, lcm);
+ 
+  return 0;
+}
+/*
+LCM - Least commom multiple 
+Ex: LCM of 4 and 6 ??
+	multiples of 4 --> 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44...
+	multiples of 6 --> 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66 ..
+	Common multipes --> 12(least), 24, 36 ...
+	LCM --> 12 
+GCD - Greatest common divisor 
+Ex: GCD of 54 and 24 ??
+	divisors of 54 --> 1, 2, 3, 6, 9, 18, 27, 54
+	divisors of 24 --> 1, 2, 3, 4, 6, 8, 12, 24
+	Common divisors --> 1, 2, 3, 6(greatest) 
+	GCD --> 6   
+*/
+

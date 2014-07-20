@@ -1,10 +1,11 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Code</title>
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery-mobile.js"></script>
-
+	<script type="text/javascript" src="js/custom.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery-mobile.css">
 </head>
 <body>
 	<div data-role="page" class="ui-responsive-panel">
@@ -12,8 +13,9 @@
 			<h1> Kodex </h1>
 			<a href="#nav-panel" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
 		</div>
-		<div class="ui-content">
-			<p> Here goes the List </p>
+		<div class="ui-content" id="content">
+			<ul data-role="listview" data-filter="true" id="list">
+			</ul>
 		</div>
 		<div data-role="panel" data-position="left" data-display="reveal" id="nav-panel" data-theme="b">
 			<ul data-role="listview" data-theme="b" data-divider-theme="a" style="margin-top:-16px;" class="nav-search" class="nav-search">
@@ -21,9 +23,40 @@
 					<a href="#" data-rel="close">Close</a>
 				</li>
 
-					
+				<li>
+					<a href="#content" onclick="generateList("All")"> All </a>
+				</li>	
+
+				<li>
+					<a href="#content" onclick="generateList("String")"> Strings </a>
+				</li>
+
+				<li>
+					<a href="#content" onclick="generateList("Number")"> Number </a>
+				</li>
+
+				<li>
+					<a href="#content" onclick="generateList("Conversion")"> Conversion </a>
+				</li>
+
+				<li>
+					<a href="#content" onclick="generateList("Sorting")"> Sorting </a>
+				</li>
+
+				<li>
+					<a href="#content" onclick="generateList("Others")"> Others </a>
+				</li>
 			</ul>
 		</div>
+		
+		<style>
+			.userform { padding:.8em 1.2em; }
+			.userform h2 { color:#555; margin:0.3em 0 .8em 0; padding-bottom:.5em; border-bottom:1px solid rgba(0,0,0,.1); }
+			.userform label { display:block; margin-top:1.2em; }
+			.ui-grid-a { margin-top:1em; padding-top:.8em; margin-top:1.4em; border-top:1px solid rgba(0,0,0,.1); }
+        </style>
+
+
 	</div>
 </body>
 </html>>

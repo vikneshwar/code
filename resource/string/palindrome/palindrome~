@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<string.h>
+void Reverse(char str[] , char rev[]);
+int main(){
+    char str[100];
+    char rev[100];
+    printf("Enter a string to check palindrome: ");
+    gets(str);
+    Reverse(str,rev);
+    if(strcmp(rev,str))
+    	printf("The given string is a palindrome");
+    else 
+	printf("The given string is not a palindrome");
+ return 0;
+}
+void Reverse(char str[] , char rev[]){
+    int i,j,len;
+    char temp[100];
+    len = strlen(str);
+    for(i=len-1,j=0; j<len; --i,++j)
+    {
+        temp[j]=str[i];
+    }
+    temp[j]='\0';
+    strcpy(rev,temp);
+}
+

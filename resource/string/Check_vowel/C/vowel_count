@@ -1,0 +1,54 @@
+#include<stdio.h>
+ 
+int count_vowels(char []);
+int check_vowel(char);
+ 
+main()
+{
+   char array[100];
+   int c;
+ 
+   printf("Enter a string\n");
+   gets(array);
+ 
+   c = count_vowels(array);
+ 
+   printf("Number of vowels: %d\n", c);
+ 
+   return 0;
+}
+ 
+int count_vowels(char a[])
+{
+   int count = 0, i = 0, flag;
+   char d;
+ 
+   do
+   {   
+      d = a[i];
+ 
+      flag = check_vowel(d);
+ 
+      if ( flag == 1 )
+         count++;
+ 
+      i++;
+   }while( d != '\0' );
+ 
+   return count;
+}
+ 
+int check_vowel(char a)
+{
+   if ( a >= 'A' && a <= 'Z' )
+      a = a + 'a' - 'A';   /* Converting to lower case */
+ 
+   if ( a == 'a' || a == 'e' || a == 'i' || a == 'o' || a == 'u')
+      return 1;
+ 
+   return 0;
+}
+
+/*
+C programming code to find how many number of vowels are present in a string, For example in the string "c programming" there are three vowels 'o', 'a' and 'i'. In the program both lower and upper case are considered i.e 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O' and 'U'. In our code we scan the complete string and check every character in it if it's a vowel then counter is incremented by one, consonants and special characters are ignored.
+*/

@@ -1,0 +1,20 @@
+#include<stdio.h>
+ 
+main()
+{
+   int n;
+ 
+   printf("Enter an integer\n");
+   scanf("%d",&n);
+ 
+   if ( n%2 == 0 )
+      printf("Even\n");
+   else
+      printf("Odd\n");
+ 
+   return 0;
+}
+/*
+ As you have study in mathematics that in decimal number system even numbers are divisible by 2 while odd are not so we may use modulus operator(%) which returns remainder, For example 4%3 gives 1 ( remainder when four is divided by three). Even numbers are of the form 2*p and odd are of the form (2*p+1) where p is is an integer.
+*/
+

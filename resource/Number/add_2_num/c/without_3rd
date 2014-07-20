@@ -1,0 +1,23 @@
+#include<stdio.h>
+ 
+main()
+{
+   int a,b;
+   printf("Enter two numbers to add \n");
+   scanf("%d%d",&a,&b);
+ 
+   /* Storing result of addition in variable a */
+ 
+   a = a + b;
+ 
+   /* Not recommended because original value of a is lost  
+    * and you may be using it somewhere in code considering it 
+    * as it was entered by the user. 
+    */
+ 
+   printf("Sum of entered numbers = %d\n", a);
+ 
+   return 0;
+}
+
+/* This program add's 2 number without using 3rd variable "c" 
