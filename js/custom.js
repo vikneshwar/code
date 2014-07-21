@@ -25,8 +25,8 @@ var label = [
 ];
 
 var link = [
-"/resource/Number/add_2_num/c/without_plus.html",
-"/resource/Number/add_2_num/c/without_3rd.html"
+"resource/Number/add_2_num/c/without_plus.html",
+"resource/Number/add_2_num/c/without_3rd.html"
 ];
 
 var generateList = function (type)
@@ -55,11 +55,11 @@ var generateList = function (type)
 };
 
 function buildForAll() {
-	var ulElement = document.getElementById("list");
-	var listElement  = document.createElement("li");
-	var anchorElement = document.createElement("a");
 
 	for (var i = 0 ; i < label.length ; i++) {
+		var ulElement = document.getElementById("list");
+		var listElement  = document.createElement("li");
+		var anchorElement = document.createElement("a");
 		var text = document.createTextNode(label[i]);
 		anchorElement.setAttribute("href",link[i]);
 		anchorElement.appendChild(text);
